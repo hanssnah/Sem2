@@ -1,0 +1,8 @@
+1. why does the copy assignment operator check for self-assignment before doing anything else?
+   Because operators need to check which is the current obejct and clear the values in the current object.
+
+2. List how you avoided duplication of code
+   setEnpty(), isValid(), isEmpty(), validation codes...
+
+3. List what you have learned in completing this workshop.
+   I've learned how to create the deconstructor and how to efficially make the overloaded functions or operators.

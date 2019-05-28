@@ -1,0 +1,18 @@
+1. No its not compiled because theres more then one fucntions defined in the header file.
+
+2. No its not working even i moved above main neither befroe it is used. I cannot define it below main.
+
+3. I can make it without template but it should be checked more complicatly. By using templates, I can get return types and parameter value automatically even its not defined.
+
+4. No difference.
+
+
+
+Quiz 7-8 reflect
+
+answer : B.2
+	 D.2
+	 B.2
+	 B...33...55
+	 B...22...44
+	 D...$

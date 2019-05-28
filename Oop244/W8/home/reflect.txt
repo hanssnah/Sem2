@@ -1,0 +1,7 @@
+1. abastract base class has just declared queries. this is part of a class but compiler don't know which code would be run.
+   concrete class has decalared and also defined queries.
+
+2.iAccount module has a list of shadow functions
+
+3. I've learned how to use pure virtual functions and virtual fucntions.
+  

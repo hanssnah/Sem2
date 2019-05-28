@@ -1,0 +1,10 @@
+
+In line number 38 of your output:
+The output should be:
+
+But your output is: 
+hscho5@matrix:~/OOP244/W2/home> exit
+^
+|
+Professor's character ASCII code: hex(d), dec(13)
+un-matched character ASCII code: hex(68), dec(104)

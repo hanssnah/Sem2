@@ -1,0 +1,15 @@
+1. What is a safe empty state? Could you define another state as the safe empty state?
+  A safe empty state is literally nothing in the variable. We can state a safe empty state as variable's pointer = '\0'.
+
+2. Describe how you have minimized code duplication.
+ I've literated the same code which is initializing empty string.
+ Also, I created functions for validation part so I could minimize the literation part for validation.
+3. Explain why the canTravelWith(...) member function can access the private data of the object referenced in its parameter.
+The 'const' feature allows to access private data in object. This is different with friend function. It can't change original value.
+
+4. What statement do you need to add to ensure that the strncpy(...) function executes correctly?
+I added the maximam length of string as a third parameter which is bigger than the other two parameters' addition.
+
+5. Explain what you have learned in this workshop
+
+I've learnd how to state a safe empty state. Also, I've learned about c++ class's constructor's proper way to use.

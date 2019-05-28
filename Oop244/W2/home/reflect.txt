@@ -1,0 +1,11 @@
+1. 'New' keyword of C++ is not capable to resize existing array.
+    When resizing is attempted based on the existing allocated memory, the data
+    in an array which was populated previously canno be ensured on the memory
+2. Becasue the name has not been allocated by new, We dont need to delete the
+   part of an array.
+3. The compiler looks at the parameter of the function. If the parameter matches
+   with the first one, it will call the first one and if it matches with second,
+   it will call the second function.
+4. I've learned how to dynamically allocate memory in c++ and how function-
+   overload system is working in this workshop. Also, this workshop helps me 
+   to practice the c++ syntax and functions.  

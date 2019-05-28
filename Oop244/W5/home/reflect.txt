@@ -1,0 +1,16 @@
+1. The operator+ returns a Fraction object. Explain why this operator should not return a fefernce to a Fraction object.
+because this operator wants to return a copy of the current object before any changes takes effect.
+
+2. List the temporary objects in the teser module
+ a)opers inside of operator+ , operator*. operator!=, operator+=, operator==
+
+3.List the simplifications that you made to your class to minimize duplication
+ I simplifided my operators to use the other operators. 
+ operator!= is not equal to == 
+ operator+= is addition of objects.
+
+4. Explain what you have learned in this workshop.
+I've learned how to overload operators and how to create its.
+Also, I've learned a class can be a return type and it has differenct meaning in post_fix and pre_fix.
+
+  

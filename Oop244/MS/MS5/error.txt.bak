@@ -1,0 +1,4 @@
+Perishable.cpp: In member function ‘virtual std::istream& AMA::Perishable::read(std::istream&)’:
+Perishable.cpp:98:7: warning: unused variable ‘tempErr’ [-Wunused-variable]
+Perishable.cpp:99:7: warning: unused variable ‘numDays’ [-Wunused-variable]
+Perishable.cpp:156:2: warning: control reaches end of non-void function [-Wreturn-type]
