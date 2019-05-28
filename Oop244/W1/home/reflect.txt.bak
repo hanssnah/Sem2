@@ -1,0 +1,5 @@
+1. Namespace is a cpp feature which is able to avoid naming conflicts. Developers can protect their function to include their function inside of a namespace.
+2. Headerfiles can help to organize the code and easy to manage the code. Developer can divide the function's declaration and definition part.
+3. We already contains header files inside of the cpp files.
+4. If we include cpp file in the other cpp file that means we need to compile twice if we have some error inside of them.
+5. I've learned what modules is and some different syntax and functions(objects) between c languages. Also, I've learned how to use namespace inside of the code and how it works.

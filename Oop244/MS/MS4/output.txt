@@ -1,0 +1,29 @@
+Script started on Tue 10 Apr 2018 01:53:51 PM EDT
+hscho5@matrix:~/OOP244/MS/MS4> ms4
+Linear: one two 
+As is: 
+one
+two
+
+Enter the following: 
+three<ENTER>
+four<ENTER>
+Ctrl^D<ENTER>
+
+three
+four
+one two three four 
+one
+two
+three
+four
+
+sku match
+Product < Perishable
+45|32|131|32
+113.5
+hscho5@matrix:~/OOP244/MS/MS4> 
+hscho5@matrix:~/OOP244/MS/MS4> exit
+exit
+
+Script done on Tue 10 Apr 2018 01:54:04 PM EDT

@@ -1,0 +1,117 @@
+#include <cstring>
+#include "Hero.h"
+using namespace std;
+
+namespace sict {
+	void Hero::setEmpty(){
+		h_name[0] = '\0';
+		h_hp = 0;
+		max_hp = 0;
+		h_dmg = 0;
+	}
+	Hero::Hero(){
+		setEmpty();
+	}
+
+	Hero::Hero(const char* p_name, int p_hp, int p_dmg) {
+	
+		if (p_name[0] != '\0' && p_name != nullptr && p_hp > 0 && p_dmg > 0) {
+			strncpy_s(h_name, p_name, 41);
+			h_name[41] = '\0';
+			h_hp = p_hp;
+			max_hp = p_hp;
+			h_dmg = p_dmg;
+		}
+		else {
+			setEmpty();
+		}
+
+	}
+	Hero::~Hero()
+	{
+	}
+
+	void Hero::operator-=(int attact) {
+		if (attact > 0) {
+			h_hp -= attact;
+		}
+		if (h_hp < 0) {
+			h_hp = 0;
+		}
+		
+	}
+	bool Hero::isEmpty() const{
+		return (h_name[0] == '\0'&& h_hp == 0 && h_dmg == 0);
+	}
+	bool Hero::isAlive() const {
+		return (h_hp > 0);
+	}
+	int Hero:: attactStrength() const {
+	
+		return h_dmg;
+	
+	}
+	int Hero::currentHp() const{
+		return h_hp;
+	}
+
+	ostream& Hero::display(std::ostream& os)const {
+		if (!isEmpty()) {
+			os << h_name;
+		}
+		else {
+			cout << "No hero";
+		}
+		return os;
+
+	}
+	//setting max hp again
+	void Hero::recover() {
+		h_hp = max_hp;
+		
+	}
+	ostream& operator<<(ostream& os, const Hero& h) {
+		return h.display(os);
+	}
+	const Hero& operator*(const Hero& one, const Hero& two) {
+		cout << "Ancient Battle! " << one << " vs " << two << " : ";
+
+		Hero A = one;
+		Hero B = two;
+		Hero *winner = new Hero;
+		
+		int round = 0;
+		bool draw;
+
+		while (A.isAlive() && B.isAlive() && round <= MAX_ROUND) {
+			
+				A -= B.attactStrength();
+				B -= A.attactStrength();
+				round++;
+			
+		}
+
+		if (A.isAlive() && B.isAlive()) {
+			draw = true;
+		}
+		else {
+			draw = false;
+		}
+
+		if (draw) {
+			*winner = A;
+		}
+		else if (A.isAlive()) {
+			*winner = A;
+		}
+		else {
+			*winner = B;
+		}
+
+		cout << "Winner is " << *winner << " in " << round << " rounds." << endl;
+
+		winner->recover();
+		return *winner;
+	}
+	
+}

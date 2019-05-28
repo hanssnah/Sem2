@@ -1,0 +1,160 @@
+
+#include "Perishable.h"
+using namespace std;
+namespace AMA {
+	//zero constructor
+	Perishable::Perishable() {
+		Perishable::Product('P');
+	}
+
+	std::fstream& Perishable::store(std::fstream& file, bool newLine ) const {
+		bool flag = false;
+		if (newLine == true) {
+			flag = true;
+		}
+		Product::store(file);
+		file << ',';
+		d.write(file);
+		if (flag) {
+			file << '\n';
+		}
+		return file;
+	}
+	std::fstream& Perishable::load(std::fstream& file) {
+		char sku[1000];
+		file.getline(sku, 1000);
+		file.ignore();
+		char p_name[1000];
+		file.getline(p_name, 1000);
+		file.ignore();
+		double price;
+		file >> price;
+		file.ignore();
+		int currqty;
+		file >> currqty;
+		file.ignore();
+		int needqty;
+		file >> needqty;
+		file.ignore();
+		d.read(file);
+		file.ignore();
+
+		setsku(sku);
+		name(p_name);
+		//setters
+
+		ori_price = price;
+		current_qty = currqty;
+		needed_qty = needqty;
+
+
+		return file;
+
+		/*char * line = new char[1000];
+		file.get(line, 1000,'\n');
+		char * context = NULL;
+		for (int i = 0; i < 8; i++) {
+			char * el = strtok_s(line, ",", &context);
+			if (el == NULL) {
+				break;
+			}
+			else if(i==1){
+				setsku(el);
+
+			}
+			else if(i==2){
+				name(el);
+			}
+			else if (i==3) {
+
+			}
+			line = context;
+		}
+		name(line);
+
+		*/
+
+
+
+	}
+	std::ostream& Perishable::write(std::ostream& os, bool linear) const {
+		Product::write(os, linear);
+
+
+
+		if (A.isClear() == true && isEmpty() == false) {
+			if (!linear) {
+				os << "Expiry date: ";
+				d.write(os);
+			}
+			else {
+				os << '|';
+				d.write(os);
+			}
+		}
+		return os;
+	}
+	std::istream& Perishable::read(std::istream& is) {
+		int tempErr = NO_ERROR;
+		int numDays;
+		char msgT[30] = "No Error";
+		Date temp;
+		Product::read(is);
+
+
+
+		if (A.isClear()) {
+			cout << "Expiry date (YYYY/MM/DD): ";
+			temp.read(is);
+			if (!is.fail()) {
+				is.setstate(ios::failbit);
+				if (temp.getErrorcode() == NO_ERROR) {
+					A.clear();
+				}
+				else if (temp.getErrorcode() == CIN_FAILED) {
+					strcpy(msgT, "Invalid Date Entry");
+				}
+				else if (temp.getErrorcode() == YEAR_ERROR) {
+					strcpy(msgT, "Invalid Year in Date Entry");
+				}
+				else if (temp.getErrorcode() == MON_ERROR) {
+					strcpy(msgT, "Invalid Month in Date Entry");
+				}
+				else if (temp.getErrorcode() == DAY_ERROR) {
+					strcpy(msgT, "Invalid Day in Date Entry");
+				}
+			}
+			/*if (temp.getYear() < min_year || temp.getYear() > max_year) {
+				tempErr = YEAR_ERROR;
+				strcpy(msgT, "Invalid Year in Date Entry");
+			}
+			else if (temp.getMonth() < 1 || temp.getMonth() > 12) {
+				tempErr = MON_ERROR;
+				strcpy(msgT, "Invalid Month in Date Entry");
+			}
+			else {
+				numDays = temp.mdays();
+				if (temp.getDate() > numDays || temp.getDate() < 1) {
+					tempErr = DAY_ERROR;
+					strcpy(msgT, "Invalid Day in Date Entry");
+				}
+			}
+		}
+		else {
+			tempErr = CIN_FAILED;
+			strcpy(msgT, "Invalid Date Entry");
+		}
+		if (tempErr != NO_ERROR) {
+			A.clear();
+			//A.message(msgT);
+		}
+	}*/
+			expiry();
+			return is;
+
+		}
+	}
+		const Date& Perishable::expiry() const {
+			return d;
+		}
+	}

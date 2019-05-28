@@ -1,0 +1,4 @@
+/tmp/ccL1LC3W.o: In function `AMA::MyProduct::operator=(AMA::MyProduct&)':
+244_ms3_tester_prof.cpp:(.text._ZN3AMA9MyProductaSERS0_[AMA::MyProduct::operator=(AMA::MyProduct&)]+0x14): undefined reference to `AMA::Product::operator=(AMA::Product&)'
+/tmp/ccL1LC3W.o:(.rodata._ZTIN3AMA9MyProductE[typeinfo for AMA::MyProduct]+0x8): undefined reference to `typeinfo for AMA::Product'
+collect2: ld returned 1 exit status

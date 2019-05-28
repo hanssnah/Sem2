@@ -1,0 +1,11 @@
+1. How many elements are there in each C=style character string that stores a family or given name for the account? Why?
+   There are 41 elements in the each family/given name character string.
+   I should add the null terminator for the character string.
+
+2. Your class declares two member functions named set(). In c, this would generate an error, Name the feature of C that allows this.
+   The feature 'function Overload' allows make same named function in same code. C++ compiler recognizes and accesses functions through parameters.
+
+3. I've learned a lot through this workshop. I've learned how to generate overloaded function and I familialized how to make namespace. 
+   Also, I've learned how floating numbers approaching the negative values or positive values.
+
+ 
