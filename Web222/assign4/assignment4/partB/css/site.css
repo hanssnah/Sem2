@@ -1,0 +1,89 @@
+/* adjust main-container for width and margin*/
+.main-container{
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+/* nav tag inside of the main container . adjust width and position*/
+.main-container nav{
+    width : 30%;
+    float : left;
+}
+/*select class main inside of main-container. adjust width and position*/
+.main-container .main{
+    width : 70%;
+    float : right;
+}
+/*select header inside of main-container. adjust padding, background,boder,margin*/
+.main-container header{
+    padding : 10px;
+    background-color: #eeeeee;
+    border-bottom : solid 1px #cccccc;
+    margin-bottom : 30px;
+}
+/*select h1 inside of header and .main-container. adjust width/fontsize/float/text-align/margin*/
+.main-container header h1{
+    width : 70%;
+    font-size : 24px;
+    float : right;
+    text-align : right;
+    margin-top : 10px;
+}
+/*select footer inside of main-container. adjust clear/padding/background/border/fontsize*/
+.main-container footer{
+    clear: both;
+    padding: 20px 10px;
+    background-color: #eeeeee;
+    border-top : solid 1px #cccccc;
+    font-size : 13px;
+}
+
+/*select Id logo . adjust width/fontsize/fontweight*/
+#logo{
+    width: 30%;
+    font-size: 25px;
+    font-weight: bold;
+}
+/*select image tag inside Id logo. adjust width/vertical-align*/
+#logo img{
+    width : 94px;
+    vertical-align: central;
+}
+/*select unordered list inside nav tag. adjust no bullets*/
+nav ul{
+    list-style-type: none;
+}
+/*select a tag inside of unordered list and nav tag. adjust display/textdeco/padding*/
+nav ul a{
+    display: block;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+/* select div classname province adjust width/float/margin/height*/
+div.province{
+    width:30%;
+    float: left;
+    margin: 8px;
+    height: 310px;
+}
+/*select classname description inside div class province. adjust max-height/overflow-y,x/margin*/
+div.province .description{
+    max-height: 165px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 8px;
+}
+/*select a tag inside div classname province . adjust dispaly/text-align/background/color/textdeco/padding*/
+div.province a{
+    display: block;
+    text-align: center;
+    background-color: #555555;
+    color: #eeeeee;
+    text-decoration: none;
+    padding: 5px;
+}
+/*select classname flag inside image tag. adjust width*/
+img .flag{
+    width: 100%;
+}

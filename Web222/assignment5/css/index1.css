@@ -1,0 +1,53 @@
+body{
+    width: 1200px;
+    margin: auto;
+    
+}
+.logo{
+    height: auto; 
+    margin-bottom : 10px;
+    text-align: center;
+    border : 0px solid;
+    background-color: lavender;
+    padding: 10px;
+}
+.logo img{
+    float: left;
+    width: 100px;
+    height: auto;
+}
+.menu{
+    width: 192px;
+    height: auto; 
+    float: left;
+    margin-bottom : 10px;
+    border : 2px solid;
+    background-color: lavender;
+    position: absolute;
+}
+.menu h3{
+    text-align: center;
+}
+.mid{
+    width: 906px;
+    border: 2px solid;
+    background-color : lavender;
+    height: auto;
+    margin-bottom : 10px;
+    margin-left: 165px;
+    margin-right : 165px; 
+    float: left;
+    padding: 10px;
+    position: relative;
+}
+.footer{
+    height: 100px;
+    clear: both;
+    border: 1px solid;
+    background-color: blanchedalmond;
+    color : darkolivegreen;
+    text-align : center;
+    position: relative;
+
+    margin-top : 500px;
+}

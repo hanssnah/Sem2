@@ -1,0 +1,55 @@
+/* Place all of your CSS Code in this file */
+
+/********************************************************************************* 
+*
+* WEB222 – Assignment #4a
+*
+* I declare that this assignment is my own work in accordance with Seneca 
+* Academic Policy. No part of this assignment has been copied manually or 
+* electronically from any other source (including web sites) or distributed to 
+* other students. 
+* 
+* Name: Hansol Cho Student ID: 103608170 Date: 2018-03-20 
+* 
+********************************************************************************/
+
+
+
+
+body {
+    color: black;
+}
+nav ,footer {
+    background-color: rgb(41, 145, 84);
+}
+
+header{
+    font-size: 150%;
+    background-color: rgb(50, 241, 178);
+    text-decoration: underline;
+}
+.app-title{
+    font-family: Mina;
+    text-decoration:overline;
+    background-color: bisque;
+}
+
+.main-table-container {
+    max-height: 500px;
+    overflow-y :scroll;
+    margin : 0px;
+}
+
+.main-table-top th{
+    text-decoration : none;
+    font-weight: bold;
+    font-family : Mina;
+    font-size : smaller;
+
+}
+
+.main-table p span {
+    font-weight: bold;
+    font-style : italic;
+    color: rgb(81, 187, 81);
+}

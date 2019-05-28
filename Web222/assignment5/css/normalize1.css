@@ -1,0 +1,59 @@
+body{
+    margin-left: auto;
+    margin-right : auto;
+    width: 1200px;
+    margin: auto;
+}
+.logo{
+    height: auto; 
+    margin-bottom : 10px;
+    text-align: center;
+    border : 0px solid;
+    background-color: lavender;
+    padding: 10px;
+}
+
+.logo img{
+    float: left;
+    width: 100px;
+    height: auto;
+}
+div section .menu{
+    width: 200px;
+    height: auto; 
+    float: left;
+    margin-bottom : 10px;
+    text-align: center;
+    border : 2px solid;
+    background-color: lavender;
+
+}
+div .center{
+    width: 590px;
+    border: 2px solid;
+    background-color : lavender;
+    height: auto;
+    margin-bottom : 10px;
+    margin-left: 80px;
+    margin-right : 80px; 
+    float: left;
+    padding: 10px 10px;
+    
+}
+div .side{
+    width: 200px; 
+    border : 2px solid;
+    background-color: lavender;
+    float: right;
+    margin-bottom : 10px;
+    text-align: center;
+
+}
+ .footer{
+   height: 100px;
+   clear: both;
+   border: 1px solid; 
+     background-color: blanchedalmond;
+   color : darkolivegreen;
+   text-align : center;
+}
